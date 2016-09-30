@@ -14,7 +14,7 @@ on Mac or Linux.
 ###Mac OS X Installation Instructions
 NOTE: THIS HAS NOT BEEN TESTED
 
-1. `sudo brew install libmotif4 && sudo brew install cmake`
+1. `sudo brew install https://gist.githubusercontent.com/steakknife/60a39a32ae84e12238a2/raw/openmotif.rb && sudo brew install cmake`
 2. Install the [DISLIN tar.gz file](http://www.mps.mpg.de/dislin/mac-osx-darwin) for Mac
     * Ensure that the installation directory is /usr/local/.
     * You should have a `/usr/local/dislin/`
