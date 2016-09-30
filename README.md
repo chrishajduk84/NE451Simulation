@@ -8,6 +8,7 @@ on Mac or Linux.
 2. Download the [DISLIN .deb file](http://www.mps.mpg.de/dislin/linux) for Linux.
     * The installation directory is /usr/local/
     * You should have a `/usr/local/dislin/real64` folder.
+    * Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
 3. `git clone https://github.com/chrishajduk84/NE451Simulation/`
 
 ###Mac OS X Installation Instructions
@@ -16,7 +17,8 @@ NOTE: THIS HAS NOT BEEN TESTED
 1. `sudo brew install libmotif4 && sudo brew install cmake`
 2. Install the [DISLIN tar.gz file](http://www.mps.mpg.de/dislin/mac-osx-darwin) for Mac
     * Ensure that the installation directory is /usr/local/.
-    * You should have a `/usr/local/dislin/real64` folder.
+    * You should have a `/usr/local/dislin/`
+    * Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
 3. `git clone https://github.com/chrishajduk84/NE451Simulation/`
 
 ###Compiling your program
@@ -32,4 +34,5 @@ In the project directory do:
 
 If you don't get any error messages, you are good to go.
 
+If you get an error message, it will likely say `error: no matching function for call to 'qplot'`. This is a result of the fact that you did not rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. As a result, the qplot function does not accept double precision floating point operations. Either copy the file, or change the type for variable `x` and `y` to float.
 
