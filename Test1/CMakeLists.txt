@@ -7,18 +7,12 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # Dependencies
 find_package(DISLIN REQUIRED)
-#find_package(Boost REQUIRED filesystem log thread system program_options unit_test_framework)
-#find_package(Threads)
-#find_package(DeckLinkSDK)
-#find_package(Exiv2 REQUIRED)
 
+message(status " DISLIN found:" ${DISLIN_FOUND})
+message(status " DISLIN IncludeDirs:" ${DISLIN_INCLUDE_DIRS})
+message(status " DISLIN Libraries:" ${DISLIN_LIBRARIES})
 
 set(CMAKE_CXX_STANDARD 11)
-
-
-#set(TESTDATA_DIR ${CMAKE_CURRENT_LIST_DIR}/testdata)
-#enable_testing()
-
 
 if (UNIX)
     message(status "Setting GCC flags")
