@@ -8,18 +8,26 @@ on Mac or Linux.
 2. Download the [DISLIN .deb file](http://www.mps.mpg.de/dislin/linux) for Linux.
     * The installation directory is /usr/local/
     * You should have a `/usr/local/dislin/real64` folder.
-    * Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
+    * DONT DO THIS, I NEVER GOT IT WORKING: Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
 3. `git clone https://github.com/chrishajduk84/NE451Simulation/`
 
 ###Mac OS X Installation Instructions
-NOTE: THIS HAS NOT BEEN TESTED
+NOTE: THIS HAS NOT BEEN THOROUGHLY TESTED
 
 1. `sudo brew install https://gist.githubusercontent.com/steakknife/60a39a32ae84e12238a2/raw/openmotif.rb && sudo brew install cmake`
 2. Install the [DISLIN tar.gz file](http://www.mps.mpg.de/dislin/mac-osx-darwin) for Mac
     * Ensure that the installation directory is /usr/local/.
     * You should have a `/usr/local/dislin/`
-    * Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
+    * DONT DO THIS, I NEVER GOT IT WORKING: Rename `/usr/local/dislin/dislin.h` to `dislinold.h`, then copy `/usr/local/dislin/real64/dislin.h` into `/usr/local/dislin/`. This will enable double precision calculations.
 3. `git clone https://github.com/chrishajduk84/NE451Simulation/`
+
+If it is still not working consider doing the following (MAC only):
+export DISLIN=/usr/local/dislin
+./INSTALL
+add the following to .bash_profile:
+# DISLIN
+export PATH="/usr/local/dislin/bin:$PATH"
+export DYLD_LIBRARY_PATH="/usr/local/dislin:$PATH"
 
 ###Compiling your program
 For now, you need to add each file you will compile into the CMakeLists.txt
