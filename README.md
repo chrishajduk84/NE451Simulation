@@ -23,17 +23,17 @@ NOTE: THIS HAS NOT BEEN THOROUGHLY TESTED
 
 If it is still not working consider doing the following (MAC only):
 
-`export DISLIN=/usr/local/dislin
+`export DISLIN=/usr/local/dislin`
 
-./INSTALL`
+`./INSTALL`
 
 add the following to .bash_profile:
 
-`# DISLIN
+`# DISLIN`
 
-export PATH="/usr/local/dislin/bin:$PATH"
+`export PATH="/usr/local/dislin/bin:$PATH"`
 
-export DYLD_LIBRARY_PATH="/usr/local/dislin:$PATH"`
+`export DYLD_LIBRARY_PATH="/usr/local/dislin:$PATH"`
 
 ###Compiling your program
 For now, you need to add each file you will compile into the CMakeLists.txt
